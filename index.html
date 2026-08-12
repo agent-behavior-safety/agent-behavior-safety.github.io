@@ -1,11 +1,312 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Agent Behavior Safety</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Project page for the survey Behavior Safety of Autonomous Interactive Agents: Risks, Attacks, Defenses, Evaluation, and Governance." />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Behavior Safety of Autonomous Interactive Agents</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Agent Behavior Safety</h1>
-  <p>Website is working.</p>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Agent Behavior Safety home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Agent Behavior Safety</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#framework">Framework</a>
+        <a href="#taxonomy">Taxonomy</a>
+        <a href="#evaluation">Evaluation</a>
+        <a href="#citation">Citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">SURVEY · AUTONOMOUS INTERACTIVE AGENTS · 2026</div>
+          <h1>Behavior Safety of<br />Autonomous Interactive Agents</h1>
+          <p class="hero-subtitle">Risks, Attacks, Defenses, Evaluation, and Governance</p>
+
+          <div class="authors" aria-label="Authors">
+            <span>Xinjie Lai<sup>1</sup></span>
+            <span>Weihao Zuo<sup>1</sup></span>
+            <span>Tianjie Ju<sup>2</sup></span>
+            <span>Haodong Zhao<sup>2</sup></span>
+            <span>Pengzhou Cheng<sup>3†</sup></span>
+            <span>Xinpeng Zhang<sup>3†</sup></span>
+          </div>
+          <div class="affiliations">
+            <p><sup>1</sup> Shanghai University · School of Communication and Information Engineering</p>
+            <p><sup>2</sup> Shanghai Jiao Tong University · School of Computer Science</p>
+            <p><sup>3</sup> Shanghai University · School of Computer Engineering and Science</p>
+            <p><sup>†</sup> Corresponding authors</p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="assets/paper/behavior-safety-survey.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l4 4v16H6zM14 2v5h5M9 12h6M9 16h6"/></svg>
+              Paper
+            </a>
+            <a class="button button-secondary" href="https://github.com/agent-behavior-safety/agent-behavior-safety.github.io" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.82a9.6 9.6 0 0 1 2.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+              GitHub
+            </a>
+            <a class="button button-secondary" href="#citation">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10H7zM4 4h10M4 4v10M20 10v10H10"/></svg>
+              BibTeX
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Behavior safety lifecycle illustration">
+          <div class="visual-orbit orbit-a"></div>
+          <div class="visual-orbit orbit-b"></div>
+          <div class="core-card">
+            <div class="core-label">BEHAVIOR SAFETY</div>
+            <div class="agent-node">
+              <span class="node-dot"></span>
+              Autonomous Agent
+            </div>
+            <div class="pipeline" aria-hidden="true">
+              <div><b>01</b><span>Perceive</span></div>
+              <i></i>
+              <div><b>02</b><span>Reason</span></div>
+              <i></i>
+              <div><b>03</b><span>Act</span></div>
+              <i></i>
+              <div><b>04</b><span>Reflect</span></div>
+            </div>
+            <div class="risk-cloud">
+              <span>Foundation Model</span>
+              <span>Memory</span>
+              <span>Tools</span>
+              <span>Multi-Agent</span>
+              <span>Environment</span>
+              <span>System</span>
+            </div>
+          </div>
+          <div class="floating-note note-one"><b>Behavior</b><span>not only content</span></div>
+          <div class="floating-note note-two"><b>Lifecycle</b><span>not one step</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section section-light">
+      <div class="section-heading">
+        <span class="kicker">Overview</span>
+        <h2>From content safety to behavior safety</h2>
+        <p>The survey shifts the safety lens from what a model says to what an autonomous agent actually does across long-horizon interaction and execution.</p>
+      </div>
+
+      <div class="comparison-grid">
+        <article class="comparison-card muted-card">
+          <div class="card-index">01</div>
+          <h3>Content Safety</h3>
+          <p>Focuses primarily on generated information and whether outputs are incorrect, unsafe, or unauthorized.</p>
+          <div class="scope-line"><span>Output</span><i></i><span>Response</span></div>
+        </article>
+
+        <div class="transition-arrow" aria-hidden="true">
+          <span>→</span>
+          <small>behavior-centric view</small>
+        </div>
+
+        <article class="comparison-card accent-card">
+          <div class="card-index">02</div>
+          <h3>Behavior Safety</h3>
+          <p>Focuses on whether autonomous agents perform harmful or uncontrolled actions across cognition, execution, environment, and collaboration.</p>
+          <div class="scope-line"><span>Cognition</span><i></i><span>Action</span><i></i><span>Feedback</span></div>
+        </article>
+      </div>
+
+      <div class="statement">
+        <span class="statement-mark">“</span>
+        <p>A unified, behavior-centric perspective connects intrinsic cognitive vulnerability, external loss-of-control risk, community safety, system safety, and evaluation.</p>
+      </div>
+    </section>
+
+    <section id="framework" class="section">
+      <div class="section-heading compact">
+        <span class="kicker">Framework</span>
+        <h2>A lifecycle view of agent behavior safety</h2>
+        <p>Safety risks can emerge from the agent's own cognitive architecture, external manipulation, surrounding ecosystems, or runtime infrastructure.</p>
+      </div>
+
+      <div class="lifecycle" role="img" aria-label="Behavior safety lifecycle from cognition to execution and feedback">
+        <div class="life-step">
+          <span class="life-number">01</span>
+          <div><strong>Cognition</strong><small>reasoning · memory · planning</small></div>
+        </div>
+        <div class="life-arrow">→</div>
+        <div class="life-step">
+          <span class="life-number">02</span>
+          <div><strong>Execution</strong><small>tool use · action selection</small></div>
+        </div>
+        <div class="life-arrow">→</div>
+        <div class="life-step">
+          <span class="life-number">03</span>
+          <div><strong>Environment</strong><small>external feedback · state</small></div>
+        </div>
+        <div class="life-arrow">→</div>
+        <div class="life-step">
+          <span class="life-number">04</span>
+          <div><strong>Collaboration</strong><small>agents · protocols · skills</small></div>
+        </div>
+      </div>
+
+      <div class="strategy-panel">
+        <div class="strategy-copy">
+          <span class="mini-label">MITIGATION PERSPECTIVES</span>
+          <h3>Constraints + Guidance</h3>
+          <p>Across the survey, mitigation is consistently organized through two recurring perspectives: <b>Behavioral Safety Constraints</b> and <b>Behavior Safety Guidance</b>.</p>
+        </div>
+        <div class="strategy-tags">
+          <div class="strategy-tag"><span>C</span>Behavioral Safety Constraints</div>
+          <div class="strategy-tag"><span>G</span>Behavior Safety Guidance</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="taxonomy" class="section section-ink">
+      <div class="section-heading on-dark">
+        <span class="kicker">Taxonomy</span>
+        <h2>Four risk domains, one behavior-centric view</h2>
+        <p>The paper organizes autonomous-agent safety around the origin and propagation of unsafe behavior.</p>
+      </div>
+
+      <div class="taxonomy-grid">
+        <article class="taxonomy-card">
+          <div class="taxonomy-top"><span>01</span><span class="taxonomy-pill">Intrinsic</span></div>
+          <h3>Endogenous Cognitive Vulnerability</h3>
+          <ul>
+            <li>Foundation Model Vulnerability</li>
+            <li>Memory Vulnerability</li>
+            <li>Tool-invocation Vulnerability</li>
+            <li>Multi-agent Architecture Vulnerability</li>
+          </ul>
+        </article>
+
+        <article class="taxonomy-card">
+          <div class="taxonomy-top"><span>02</span><span class="taxonomy-pill">Adversarial</span></div>
+          <h3>External Loss-of-Control Risk</h3>
+          <ul>
+            <li>Supply-Chain Manipulation</li>
+            <li>User-Level Manipulation</li>
+            <li>Environment-Level Manipulation</li>
+            <li>Cross-Agent Interaction Risks</li>
+          </ul>
+        </article>
+
+        <article class="taxonomy-card">
+          <div class="taxonomy-top"><span>03</span><span class="taxonomy-pill">Ecosystem</span></div>
+          <h3>Community Safety</h3>
+          <ul>
+            <li>Protocol and Interface Risks</li>
+            <li>Third-Party Extension Risks</li>
+            <li>Skill Risks</li>
+          </ul>
+        </article>
+
+        <article class="taxonomy-card">
+          <div class="taxonomy-top"><span>04</span><span class="taxonomy-pill">Runtime</span></div>
+          <h3>System Safety</h3>
+          <ul>
+            <li>Resource Exhaustion</li>
+            <li>Isolation and Permission Failures</li>
+            <li>Runtime Execution Vulnerabilities</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="topic-strip" aria-label="Representative topics">
+        <span>Memory contamination</span>
+        <span>Memory conflict</span>
+        <span>Memory misevolution</span>
+        <span>Tool-use risk</span>
+        <span>Multi-agent coordination</span>
+        <span>Prompt injection</span>
+        <span>Retrieval poisoning</span>
+        <span>Skill ecosystem risk</span>
+      </div>
+    </section>
+
+    <section id="evaluation" class="section">
+      <div class="section-heading compact">
+        <span class="kicker">Evaluation</span>
+        <h2>Assessing intrinsic and external security risks</h2>
+        <p>The evaluation section distinguishes intrinsic failures under benign conditions from externally induced security risks.</p>
+      </div>
+
+      <div class="evaluation-grid">
+        <article class="eval-card">
+          <span class="eval-icon">I</span>
+          <div>
+            <h3>Intrinsic Security Risks</h3>
+            <p>Long-horizon agent failures can emerge without adversarial interference, including reasoning flaws, state-maintenance errors, and execution-strategy deviations.</p>
+          </div>
+        </article>
+        <article class="eval-card">
+          <span class="eval-icon">E</span>
+          <div>
+            <h3>External Security Risks</h3>
+            <p>Evaluation also covers risks introduced through adversarial inputs, external skills, tool ecosystems, and other interaction surfaces.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="benchmark-card">
+        <div>
+          <span class="mini-label">HINTBENCH · DESCRIBED IN THE SURVEY</span>
+          <h3>Non-attack intrinsic risk auditing</h3>
+          <p>The survey describes HINTBench for trajectory-level risk detection, risk-step localization, and intrinsic failure-type identification in long-duration agent behavior.</p>
+        </div>
+        <div class="stats-grid">
+          <div><strong>629</strong><span>trajectories</span></div>
+          <div><strong>523</strong><span>risky</span></div>
+          <div><strong>106</strong><span>safe</span></div>
+          <div><strong>33</strong><span>avg. steps</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="citation" class="section section-light">
+      <div class="section-heading compact">
+        <span class="kicker">Citation</span>
+        <h2>Cite this survey</h2>
+        <p>The DOI in the current manuscript is a placeholder. Update the BibTeX once the final publication metadata is available.</p>
+      </div>
+
+      <div class="citation-box">
+        <button id="copy-bib" class="copy-button" type="button">Copy BibTeX</button>
+        <pre id="bibtex"><code>@article{lai2026behavior,
+  title   = {Behavior Safety of Autonomous Interactive Agents: Risks, Attacks, Defenses, Evaluation, and Governance},
+  author  = {Lai, Xinjie and Zuo, Weihao and Ju, Tianjie and Zhao, Haodong and Cheng, Pengzhou and Zhang, Xinpeng},
+  journal = {Proceedings of the ACM on Measurement and Analysis of Computing Systems},
+  volume  = {37},
+  number  = {4},
+  article = {111},
+  year    = {2026},
+  note    = {DOI pending}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <span class="brand-mark" aria-hidden="true"></span>
+      <b>Agent Behavior Safety</b>
+    </div>
+    <p>Behavior Safety of Autonomous Interactive Agents · 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
