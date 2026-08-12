@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Project page for the survey Behavior Safety of Autonomous Interactive Agents: Risks, Attacks, Defenses, Evaluation, and Governance." />
+  <meta name="description" content="Project page for the survey Behavior Safety of Autonomous Interactive Agents: Risks, Attacks, Defenses and Evaluation." />
   <meta name="theme-color" content="#0f172a" />
   <title>Behavior Safety of Autonomous Interactive Agents</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -18,9 +18,6 @@
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#overview">Overview</a>
-        <a href="#framework">Framework</a>
-        <a href="#taxonomy">Taxonomy</a>
-        <a href="#evaluation">Evaluation</a>
         <a href="#citation">Citation</a>
       </nav>
     </div>
@@ -32,29 +29,35 @@
         <div class="hero-copy">
           <div class="eyebrow">SURVEY · AUTONOMOUS INTERACTIVE AGENTS · 2026</div>
           <h1>Behavior Safety of<br />Autonomous Interactive Agents</h1>
-          <p class="hero-subtitle">Risks, Attacks, Defenses, Evaluation, and Governance</p>
+          <p class="hero-subtitle">Risks, Attacks, Defenses and Evaluation</p>
 
           <div class="authors" aria-label="Authors">
             <span>Xinjie Lai<sup>1</sup></span>
             <span>Weihao Zuo<sup>1</sup></span>
-            <span>Tianjie Ju<sup>2</sup></span>
+            <span>Zheng Wu<sup>2</sup></span>
+            <span>Tianjie Ju<sup>3</sup></span>
             <span>Haodong Zhao<sup>2</sup></span>
-            <span>Pengzhou Cheng<sup>3†</sup></span>
-            <span>Xinpeng Zhang<sup>3†</sup></span>
+            <span>Xiaofeng Zhang<sup>4</sup></span>
+            <span>Zhuosheng Zhang<sup>2</sup></span>
+            <span>Gongshen Liu<sup>2</sup></span>
+            <span>Xinpeng Zhang<sup>5</sup></span>
+            <span>Pengzhou Cheng<sup>5†</sup></span>
           </div>
           <div class="affiliations">
-            <p><sup>1</sup> Shanghai University · School of Communication and Information Engineering</p>
-            <p><sup>2</sup> Shanghai Jiao Tong University · School of Computer Science</p>
-            <p><sup>3</sup> Shanghai University · School of Computer Engineering and Science</p>
-            <p><sup>†</sup> Corresponding authors</p>
+            <p><sup>1</sup> School of Communication and Information Engineering, Shanghai University, Shanghai, China</p>
+            <p><sup>2</sup> School of Computer Science, Shanghai Jiao Tong University, Shanghai, China</p>
+            <p><sup>3</sup> School of Computing, National University of Singapore, Singapore</p>
+            <p><sup>4</sup> School of Computer Science and Technology, Soochow University, China</p>
+            <p><sup>5</sup> School of Computer Engineering and Science, Shanghai University, Shanghai, China</p>
+            <p><sup>†</sup> Corresponding author: Pengzhou Cheng</p>
           </div>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="assets/paper/behavior-safety-survey.pdf" target="_blank" rel="noopener">
+            <a class="button button-primary" href="https://www.researchgate.net/publication/410588217_Behavior_Safety_of_Autonomous_Interactive_Agents_Risks_Attacks_Defenses_and_Evaluation" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l4 4v16H6zM14 2v5h5M9 12h6M9 16h6"/></svg>
               Paper
             </a>
-            <a class="button button-secondary" href="https://github.com/agent-behavior-safety/agent-behavior-safety.github.io" target="_blank" rel="noopener">
+            <a class="button button-secondary" href="https://github.com/zuo-dot/Behavior-Safety-of-Autonomous-Interactive-Agents" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.82a9.6 9.6 0 0 1 2.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
               GitHub
             </a>
@@ -65,36 +68,6 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Behavior safety lifecycle illustration">
-          <div class="visual-orbit orbit-a"></div>
-          <div class="visual-orbit orbit-b"></div>
-          <div class="core-card">
-            <div class="core-label">BEHAVIOR SAFETY</div>
-            <div class="agent-node">
-              <span class="node-dot"></span>
-              Autonomous Agent
-            </div>
-            <div class="pipeline" aria-hidden="true">
-              <div><b>01</b><span>Perceive</span></div>
-              <i></i>
-              <div><b>02</b><span>Reason</span></div>
-              <i></i>
-              <div><b>03</b><span>Act</span></div>
-              <i></i>
-              <div><b>04</b><span>Reflect</span></div>
-            </div>
-            <div class="risk-cloud">
-              <span>Foundation Model</span>
-              <span>Memory</span>
-              <span>Tools</span>
-              <span>Multi-Agent</span>
-              <span>Environment</span>
-              <span>System</span>
-            </div>
-          </div>
-          <div class="floating-note note-one"><b>Behavior</b><span>not only content</span></div>
-          <div class="floating-note note-two"><b>Lifecycle</b><span>not one step</span></div>
-        </div>
       </div>
     </section>
 
@@ -280,20 +253,16 @@
       <div class="section-heading compact">
         <span class="kicker">Citation</span>
         <h2>Cite this survey</h2>
-        <p>The DOI in the current manuscript is a placeholder. Update the BibTeX once the final publication metadata is available.</p>
+        <p>Current public version: 2026 preprint.</p>
       </div>
 
       <div class="citation-box">
         <button id="copy-bib" class="copy-button" type="button">Copy BibTeX</button>
-        <pre id="bibtex"><code>@article{lai2026behavior,
-  title   = {Behavior Safety of Autonomous Interactive Agents: Risks, Attacks, Defenses, Evaluation, and Governance},
-  author  = {Lai, Xinjie and Zuo, Weihao and Ju, Tianjie and Zhao, Haodong and Cheng, Pengzhou and Zhang, Xinpeng},
-  journal = {Proceedings of the ACM on Measurement and Analysis of Computing Systems},
-  volume  = {37},
-  number  = {4},
-  article = {111},
-  year    = {2026},
-  note    = {DOI pending}
+        <pre id="bibtex"><code>@misc{lai2026behavior,
+  title  = {Behavior Safety of Autonomous Interactive Agents: Risks, Attacks, Defenses and Evaluation},
+  author = {Lai, Xinjie and Zuo, Weihao and Wu, Zheng and Ju, Tianjie and Zhao, Haodong and Zhang, Xiaofeng and Zhang, Zhuosheng and Liu, Gongshen and Zhang, Xinpeng and Cheng, Pengzhou},
+  year   = {2026},
+  note   = {Preprint}
 }</code></pre>
       </div>
     </section>
